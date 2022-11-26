@@ -1,0 +1,282 @@
+/* 공용 */
+html {
+    font-size: 1em;
+    width: 100%;
+}
+body {
+    font-family: 'S-CoreDream-5Medium';
+    font-size: 10px;
+    color: #fff;
+}
+
+.section {
+    position: relative;
+    height: 100vh;
+    /* overflow: ; */
+}
+.section:nth-child(odd) {
+    background-color: #1A1C34;
+    background: url("../images/common/bg02.jpg") no-repeat center;
+    background-size: cover;
+}
+.section:nth-child(even) {
+    background-color: #131426;
+    background: url("../images/common/bg03.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.font_effect {
+    color: #faa107;
+}
+
+/* 공용 style */
+.section .content {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.section .content .title {
+    font-family: 'S-CoreDream-7ExtraBold';
+    font-size: 3.2em;
+    color: #20AAFB;
+    text-align: center;
+    opacity: 0;
+}
+.section .content .text {
+    margin-top: 10px;
+    font-size: 2.4em;
+    line-height: 32px;
+    text-align: center;
+    opacity: 0;
+}
+.section .content .main_cont {
+    margin-top: 30px;
+}
+
+/* 공용 애니메이션 */
+.section.active .content .title {
+    animation: show 0.5s linear 0.3s 1 forwards;
+}
+.section.active .content .text {
+    animation: show 0.5s linear 0.6s 1 forwards;
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* chase_circle */
+/* about */
+.about .chase_circle {
+    position: absolute;
+    right: -350px;
+    bottom: -350px;
+    width: 600px;
+}
+/* skill */
+.skill .chase_circle {
+    position: absolute;
+    left: -350px;
+    bottom: -350px;
+    width: 600px;
+}
+circle {
+    fill: none;
+    stroke-width: 3;
+    animation-name: preloader;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: 170px 170px;
+    will-change: transform;
+}
+circle:nth-of-type(1) {
+    stroke-dasharray: 550px;
+    animation-delay: 0.15s;
+}
+circle:nth-of-type(2) {
+    stroke-dasharray: 500px;
+    animation-delay: 0.3s;
+}
+circle:nth-of-type(3) {
+    stroke-dasharray: 450px;
+    animation-delay: 0.45s;
+}
+circle:nth-of-type(4) {
+    stroke-dasharray: 300px; 
+    animation-delay: 0.6s;
+}
+@keyframes preloader {
+    0% {
+        transform: rotate(0deg);
+    } 
+    50% {
+        transform: rotate(180deg);
+    } 
+    100% {
+        transform: rotate(360deg);
+    } 
+}
+
+
+/* 테블릿 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* 공용 */
+    .section {
+        overflow: hidden;
+    }
+    /* 공용 style */
+    .section .content .title {
+        font-size: 3em;
+    }
+    .section .content .text {
+        margin-top: 5px;
+        font-size: 2.4em;
+        line-height: 36px;
+    }
+    .section .content .main_cont {
+        margin-top: 30px;
+    }
+
+    /* chase_circle */
+    /* about */
+    .about .chase_circle {
+        position: absolute;
+        right: -350px;
+        bottom: -350px;
+        width: 600px;
+    }
+    /* skill */
+    .skill .chase_circle {
+        position: absolute;
+        left: -350px;
+        bottom: -350px;
+        width: 600px;
+    }
+    circle {
+        display: none;
+        fill: none;
+        stroke-width: 3;
+        animation-name: preloader;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        transform-origin: 170px 170px;
+        will-change: transform;
+    }
+    circle:nth-of-type(1) {
+        stroke-dasharray: 550px;
+        animation-delay: 0.15s;
+    }
+    circle:nth-of-type(2) {
+        stroke-dasharray: 500px;
+        animation-delay: 0.3s;
+    }
+    circle:nth-of-type(3) {
+        stroke-dasharray: 450px;
+        animation-delay: 0.45s;
+    }
+    circle:nth-of-type(4) {
+        stroke-dasharray: 300px; 
+        animation-delay: 0.6s;
+    }
+    @keyframes preloader {
+        0% {
+            transform: rotate(0deg);
+        } 
+        50% {
+            transform: rotate(180deg);
+        } 
+        100% {
+            transform: rotate(360deg);
+        } 
+    }
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+    /* 공용 */
+    .section {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .section:nth-child(odd) {
+        background: url("../images/common/bg02.jpg");
+    }
+    .section:nth-child(even) {
+        background: url("../images/common/bg03.jpg");
+    }
+    
+    
+    /* 공용 style */
+    .section .content {
+        padding: 0 20px;
+    }
+    .section .content .title {
+        font-size: 2.4em;
+    }
+    .section .content .text {
+        margin-top: 10px;
+        font-size: 1.5em;
+        line-height: 24px;
+    }
+    .section .content .main_cont {
+        margin-top: 30px;
+    }
+    
+    
+    /* chase_circle */
+    /* about */
+    .about .chase_circle {
+        display: none;
+    }
+    /* skill */
+    .skill .chase_circle {
+        display: none;
+    }
+    circle {
+        display: none;
+        fill: none;
+        stroke-width: 3;
+        animation-name: preloader;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        transform-origin: 170px 170px;
+        will-change: transform;
+    }
+    circle:nth-of-type(1) {
+        stroke-dasharray: 550px;
+        animation-delay: 0.15s;
+    }
+    circle:nth-of-type(2) {
+        stroke-dasharray: 500px;
+        animation-delay: 0.3s;
+    }
+    circle:nth-of-type(3) {
+        stroke-dasharray: 450px;
+        animation-delay: 0.45s;
+    }
+    circle:nth-of-type(4) {
+        stroke-dasharray: 300px; 
+        animation-delay: 0.6s;
+    }
+    @keyframes preloader {
+        0% {
+            transform: rotate(0deg);
+        } 
+        50% {
+            transform: rotate(180deg);
+        } 
+        100% {
+            transform: rotate(360deg);
+        } 
+    }
+}

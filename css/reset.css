@@ -1,0 +1,133 @@
+html, body,  applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul, li {
+	list-style: none;
+}
+a {  text-decoration: none; color: inherit;}
+a:hover{text-decoration: none;}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body, input, textarea, select, button, table{
+	font-family: "S-CoreDream-4Regular", "Nanum Barun Gothic", "돋움", Dotum;
+	font-size: 12px;
+	line-height: 1.7;
+	color: #181818;
+}
+
+.ir{
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#mySwipe li b {
+  display:block;
+  font-weight:bold;
+  color:#14ADE5;
+  font-size:20px;
+  text-align:center;
+  margin:10px;
+  /*padding:100px 10px;*/
+  box-shadow: 0 1px #EBEBEB;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid;
+  border-color: #E5E5E5 #D3D3D3 #B9C1C6;
+}
+
+.blind {
+	position: absolute;
+	top: -10000px;
+	left: -100000px;
+	display: block;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+.clear::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+img {
+	display: block;
+	width: 100%;
+}
+
+strong {
+	font-weight: 400;
+}
+
+a {
+	display: block;
+	width: 100%;
+}
+
+.pc {
+	display: block;
+}
+.pc_inline {
+	display: inline-block;
+}
+.mo {
+	display: none;
+}
+.mo_inline {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.pc {
+		display: none;
+	}
+	.pc_inline {
+		display: none;
+	}
+	.mo {
+		display: block;
+	}
+	.mo_inline {
+		display: inline-block;
+	}
+}
