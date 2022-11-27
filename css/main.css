@@ -1025,7 +1025,7 @@
     /* 소개합니다. - about */
     .about {
         height: max-content !important;
-        padding: 120px 0;
+        padding: 80px 0 300px 0;
         z-index: 11;
     }
     .about .content {
@@ -1060,7 +1060,7 @@
 
     /* 할줄알아요. - skill */
     .skill {
-        padding: 120px 0;
+        padding: 80px 0 300px 0;
     }
     .skill .content .main_cont {
         display: grid;
@@ -1102,7 +1102,7 @@
 
     /* 제작했어요 - work */
     .work {
-        padding: 120px 0 !important;
+        padding: 80px 0 !important
     }
     .work .content {
         width: 100%;
