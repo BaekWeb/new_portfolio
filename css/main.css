@@ -434,8 +434,7 @@
 .work .content .main_cont .work_swiper .swiper-slide .slide_cont {
     position: relative;
     /* width: 100%; */
-    min-width: 300px;
-    max-width: fit-content;
+    max-width: 300px;
     display: block;
     padding: 15px;
     text-align: left;
